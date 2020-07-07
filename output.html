@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>My JS Practice</h1>
+    <p id="here"></p>
+    <button type="button" id="btn">Try it</button>
+    <button type="button" id="alert">alert</button>
+    <button type="button" id="console">console</button>
+    <buttton type="button" id="print">print</buttton>
+    <script lang="scss">
+        document.getElementById('here').innerHTML = 5+6;
+        document.write(5+6);
+        document.getElementById('btn').addEventListener('click', function(){
+            //html이 로드된 후 documnet.write를 사용하면 모든 html을 삭제한다.
+            document.write('add');
+        })
+        document.getElementById('alert').addEventListener('click', ()=>{
+            window.alert('alert!!');
+            //window 생략가능
+            alert('생략가능!!');
+        })
+        document.getElementById('console').addEventListener('click', () => console.log('log'))
+        document.getElementById('print').addEventListener('click', () => window.print())
+    </script>
+</body>
+</html>
