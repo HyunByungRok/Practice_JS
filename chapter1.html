@@ -6,26 +6,26 @@
     <title>Document</title>
     <style lang="scss">
         .hide {
-            display: none;
+            display: block;
         }
     </style>
+    <script>
+        function myFunction(){
+            const el = document.getElementById('target');
+            if(el.innerHTML==="After") el.innerHTML = "Before";
+            else el.innerHTML="After";
+        }
+        var changeStyle = function(){
+            const el = document.getElementById('target');
+            if(el.style.display==="none") el.style.display="block";
+            else el.style.display="none"
+        }
+    </script>
 </head>
 <body>
     <p id="target" class="hide">Before</p>
-    <button type="button" onclick="click" id="btn">Click Me!</button>
-    <button type="button" onclick="changeStyle" id="changeStyle">changeStyle</button>
+    <button type="button" onclick="myFunction()" id="btn">Click Me!</button>
+    <button type="button" onclick="changeStyle()" id="changeStyle">changeStyle</button>
 </body>
-<script>
-    var el = document.getElementById('target');
-    var click = function(){
-        if(el.innerHTML==="After") el.innerHTML = "Before";
-        else el.innerHTML="After";
-    }
-    var changeStyle = function(){
-        if(el.style.display==="none") el.style.display="block";
-        else el.style.display="none"
-    }
-    document.getElementById('btn').addEventListener('click', click);
-    document.getElementById('changeStyle').addEventListener('click', changeStyle);
-</script>
+
 </html>
