@@ -13,4 +13,5 @@ function localVariable(){
     console.log(carName);
 }
 localVariable();
+//var 형이 함수형 scope 변수라서 외부에서 접근 불가
 // console.log(carName);
