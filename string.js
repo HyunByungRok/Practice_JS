@@ -38,4 +38,4 @@ console.log(x===y);
 var x = new String("John");
 console.log(x==y)
 console.log(x===y);
-// Object는 비교를 할 수 없기때문에 전부 안된다.
+// Object는 비교를 할 수 없기때문에 ==든 ===든 항상 false를 반환한다.
