@@ -1,0 +1,1 @@
+//자바스크립트는 Number이란 타입만 가지므로 int나 float없이 그냥 decimals를 사용할 수 잇다.
