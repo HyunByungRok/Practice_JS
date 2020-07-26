@@ -22,4 +22,17 @@ function solution(n){
     return temp.reverse().join("");
 }
 
+let change = ["4", "1", "2"];
+function solution2(n){
+    let answer = "";
+    while(n>0){
+        let cur = n%3;
+        answer = change[cur] + answer;
+        if(cur===0) n--;
+        n = Math.floor(n/3); 
+    }
+    return answer;
+}
+
 console.log(solution(n));
+console.log(solution2(n));
