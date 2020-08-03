@@ -71,7 +71,13 @@ console.log(numbers.find(v => v>32));
 console.log(numbers.findIndex(v => v>32));
 
 //10.2.2 fill()
-//특정 값으로 배열을 채운다. 인덱스를 지정할 수 있다.
+//특정 값으로 배열을 채운다. 인덱스를 지정할 수 있다. 아래는 초기 0으로 초기화되어있다고 가정
 Array().fill(1); //(value) [1,1,1,1,1,1]
-Array().fill(1,2); //(value, startIndex) [1,2,1,1,1,1]
-Array().fill(1,1,3);
+Array().fill(1,2); //(value, startIndex) [0,0,1,1,1,1]
+Array().fill(1,1,3); //(value, startIndex, endIndex) [0, 1, 1, 0, 0]
+
+//10.2.3 copyWithin()
+//배열내의 요소값을 복사하는 메서드
+//(start, copy) start에 copy에서 시작하는 값을 복사해나감
+//(start, copy, stop) start에 copy에서 시작하는 값을 복사하는데 stop에서 정지 자기는 제외
+    
