@@ -8,7 +8,7 @@ function solution(brown, yellow) {
         height = i;
         width = total/i;
         if((height-2)*(width-2) === yellow){
-            return [height, width].sort((a,b) => b-a);
+            return [width, height];
         } 
 
     }
