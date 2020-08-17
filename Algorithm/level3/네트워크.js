@@ -12,11 +12,11 @@ function solution(n, computers) {
 }
 
 function dfs(cur, visited, computers) {
-    for(let i=0; i<computers[cur].length; i++) {
-        if(computers[cur][i] == 0 || visited[i]) continue;
+    computers[cur].forEach((e, i) => {
+        if(e===0 || visited[i]) return;
         visited[i] = true;
         dfs(i, visited, computers);
-    }
+    });
 }
 
 console.log(solution(n, computers));
