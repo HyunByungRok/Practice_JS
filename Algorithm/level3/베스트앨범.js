@@ -32,7 +32,7 @@ function convertArr(genres, plays, map) {
 function getAnswer(arr) {
     let count = 0, key = "";
     return arr.reduce((a, c) => {
-        let [genre, plays, idx] = c;
+        let [genre, , idx] = c;
         if(key === genre && count <1){
             a.push(idx);
             count+=1;
